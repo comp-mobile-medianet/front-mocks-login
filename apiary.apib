@@ -455,6 +455,78 @@ _eventId: enroll
             "status": "ERROR",
             "pageContent": null
         }
+
+# Group UncompleteEnrollment
+
+Shows the uncompleteEnrollment form
+
+Form parameters:
+<ul>
+   <li>questionId (list)</li>
+   <li>answerText (list)</li>
+</ul>
+    
+## Correct answer [/pages/login/uncompleteEnrollment.json]
+### Activate [GET]
++ Response 200 (application/json)
+
+        {
+            "alerts": null, 
+            "pageContent": {
+                "challengeQuestions":[
+                   {
+                      "questionId":"Q1.14",
+                      "questionText":"What was the name of your junior high school?"
+                   },
+                   {
+                      "questionId":"Q1.17",
+                      "questionText":"What was your first car?"
+                   },
+                   {
+                      "questionId":"Q1.24",
+                      "questionText":"What town did you meet your spouse in for the first time?"
+                   },
+                   {
+                      "questionId":"Q1.21",
+                      "questionText":"What town did your maternal grandmother live in?"
+                   },
+                   {
+                      "questionId":"Q1.22",
+                      "questionText":"What is the middle name of your best friend?"
+                   },
+                   {
+                      "questionId":"Q1.19",
+                      "questionText":"What was the name of your elementary school?"
+                   },
+                   {
+                      "questionId":"Q1.16",
+                      "questionText":"What was the first name of your first manager?"
+                   },
+                   {
+                      "questionId":"Q1.15",
+                      "questionText":"What was the name of the first company you worked for?"
+                   },
+                   {
+                      "questionId":"Q1.20",
+                      "questionText":"What was your childhood nickname?"
+                   },
+                   {
+                      "questionId":"Q1.18",
+                      "questionText":"What was the year and make of your first car?"
+                   },
+                   {
+                      "questionId":"Q1.13",
+                      "questionText":"What was the name of your first pet?"
+                   },
+                   {
+                      "questionId":"Q1.23",
+                      "questionText":"What is the first name of your first college roommate?"
+                   }
+                ]
+            },
+            "flowExecutionUrl": "/accounts.html?execution=1"
+        }
+
         
 # Group Enroll user
 
@@ -469,8 +541,7 @@ Form parameters:
    <li>emailConfirm</li>
    <li>questionId (list)</li>
    <li>answerText (list)</li>
-   <li>securityPhrase</li>
-   <li>securityImage</li>
+
 </ul>
 
 _eventId: signIn
