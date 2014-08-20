@@ -379,7 +379,7 @@ _eventId: enroll
                 }
             ],
             "status": "OK",
-            "flowExecutionUrl": "/api/login/activateUser.json?_eventId=enroll",
+            "flowExecutionUrl": "/api/login/activateUser.json?mockId=3&_eventId=enroll",
             "pageContent": {
                 "challengeQuestions":[
                    {
@@ -452,6 +452,26 @@ _eventId: enroll
             ],
             "flowExecutionUrl": "/api/login/activateUser.json?execution=1",
             "status": "ERROR",
+            "pageContent": null
+        }
+
+## Enroll ok [/api/login/activateUser.json?mockId=3]
+### Error [GET]
++ Response 200 (application/json)
+
+        {
+            "alerts": [
+                {
+                    "type": "INFO",
+                    "alert": [
+                        {
+                            "text": "Enroll Ok"
+                        }
+                    ]
+                }
+            ],
+            "status": "OK",
+            "flowExecutionUrl": "/accounts.html?execution=1",
             "pageContent": null
         }
 
