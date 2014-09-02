@@ -595,3 +595,37 @@ _eventId: validateAccount
             },
             "flowExecutionUrl": "/api/login/recoveryChallenge.json?mockId=2&_eventId=recoveryChallenge"
         }
+        
+# Group Recovery Password
+
+User's nickname recovery first step
+
+Form parameters:
+<ul>
+    <li>username</li>
+</ul>
+    
+_eventId: validateUsername
+
+## First access [/pages/login/recoveryPassword.json]
+### Challenge [GET]
++ Response 200 (application/json)
+
+        {
+            "alerts": null,
+            "pageContent": {
+            },
+            "flowExecutionUrl": "/api/login/recoveryPasswordUsername.json?mockId=2&_eventId=recoveryPasswordUsername"
+        }
+
+
+## Second access [/api/login/recoveryPasswordUsernames.json]
+### Challenge [GET]
++ Response 200 (application/json)
+
+        {
+            "status": "OK",
+            "pageContent": {
+            },
+            "flowExecutionUrl": "/api/login/recoveryChallenge.json?mockId=2&_eventId=recoveryChallenge"
+        }
