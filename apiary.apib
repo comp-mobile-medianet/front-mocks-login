@@ -223,15 +223,12 @@ Form parameters:
     
 _eventId: validateQuestion
 
-## First access [/pages/login/recoveryChallenge.json]
+## First access [/api/login/recoveryChallenge.json]
 ### Challenge [GET]
 + Response 200 (application/json)
 
         {
-            "header": {
-                "title": "Forgot username"
-            },
-            "alerts": null,
+            "status": "OK",
             "pageContent": {
                 "securityQuestion": "What was the name of your first pet?"
             }
@@ -574,4 +571,27 @@ _eventId: signIn
             "status": "OK",
             "flowExecutionUrl": "/login/termsAndConditions.html?execution=1",
             "pageContent": null
+        }
+
+# Group Recovery Nickname
+
+User's nickname recovery first step
+
+Form parameters:
+<ul>
+    <li>email</li>
+    <li>accountNumber</li>
+</ul>
+    
+_eventId: validateAccount
+
+## First access [/pages/login/recoveryNickname.json]
+### Challenge [GET]
++ Response 200 (application/json)
+
+        {
+            "alerts": null,
+            "pageContent": {
+            },
+            "flowExecutionUrl": "/api/login/recoveryChallenge.json?mockId=2&_eventId=recoveryChallenge"
         }
