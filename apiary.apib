@@ -594,7 +594,7 @@ _eventId: validateAccount
             "alerts": null,
             "pageContent": {
             },
-            "flowExecutionUrl": "/api/login/recoveryChallenge.json?mockId=2&_eventId=recoveryChallenge"
+            "flowExecutionUrl": "/api/login/validateQuestion.json?mockId=2"
         }
         
 # Group Recovery Password
@@ -621,6 +621,17 @@ _eventId: validateUsername
 
 
 ## Second access [/api/login/recoveryPasswordUsername.json]
+### Challenge [GET]
++ Response 200 (application/json)
+
+        {
+            "status": "OK",
+            "pageContent": {
+            },
+            "flowExecutionUrl": "/api/login/validateQuestion.json?mockId=2"
+        }
+
+## Third access [/api/login/validateQuestion.json]
 ### Challenge [GET]
 + Response 200 (application/json)
 
