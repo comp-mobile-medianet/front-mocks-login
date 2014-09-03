@@ -11,6 +11,7 @@ Login first step with nickname input
 Form parameters:
 <ul>
     <li>username</li>
+    <li>password</li>
     <li>rememberMe</li>
 </ul>
     
@@ -46,6 +47,19 @@ _eventId:
             ]
         }
         
+## Remembered user [/pages/login/validate.json?mockId=3]
+### Password [GET]
++ Response 200 (application/json)
+
+        {
+            "alerts": null,
+            "pageContent": {
+                "remembered": true,
+                "nickname": "Marcos Manuel",
+                "lastSignonDate": "Wednesday 03/12/2014"
+            }
+        }
+
 
 # Group LoginChallenge
 
@@ -90,84 +104,6 @@ _eventId: validateQuestion
                 "securityQuestion": "What was the name of your first pet?"
             }
         }
-
-# Group LoginPassword
-
-Login third step with password input
-
-Form parameters:
-<ul>
-    <li>password</li>
-</ul>
-    
-_eventId:
-<ul>
-    <li>Submit: validatePassword</li>
-    <li>Forgot password: rememberPassword</li>
-</ul>
-
-## First acces [/pages/login/password.json]
-### Password [GET]
-+ Response 200 (application/json)
-
-        {
-            "alerts": null,
-            "pageContent": null
-        }
-
-## Wrong password [/pages/login/password.json?mockId=2]
-### Password [GET]
-+ Response 200 (application/json)
-
-        {
-            "alerts": [
-                {
-                    "type": "ERROR",
-                    "alert": [
-                        {
-                            "text": "Wrong password. Verify it and try again.",
-                            "field": ""
-                        }
-                    ]
-                }
-            ],
-            "pageContent": null
-        }
-
-## Remembered user [/pages/login/password.json?mockId=3]
-### Password [GET]
-+ Response 200 (application/json)
-
-        {
-            "alerts": null,
-            "pageContent": {
-                "remembered": true,
-                "nickname": "Marcos Manuel",
-                "lastSignonDate": "Wednesday 03/12/2014"
-            }
-        }
-
-
-# Group LoginKnownUser
-
-Login first step if user selected to remember him in a previous access
-
-Form parameters: -
-
-_eventId: validateUser
-
-## Access [/pages/login/knownUser.json]
-### Known User [GET]
-+ Response 200 (application/json)
-
-        {
-            "alerts": null,
-            "pageContent": {
-                "nickname": "Marcos Manuel",
-                "lastSignonDate": "Wednesday 03/12/2014"
-            }
-        }
-
 
 # Group LoginTermsAndConditions
 
