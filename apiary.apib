@@ -626,7 +626,6 @@ _eventId: validateUsername
         {
             "status": "OK",
             "pageContent": {
-                "securityQuestion": "What was the name of your first pet?"
             },
             "flowExecutionUrl": "/api/login/validateQuestion.json?mockId=2"
         }
@@ -637,7 +636,8 @@ _eventId: validateUsername
 
         {
             "status": "OK",
-            "pageContent": {
+            "pageContent": {{
+                "securityQuestion": "What was the name of your first pet?"
             },
             "flowExecutionUrl": "/api/login/recoveryChallenge.json?mockId=2"
         }
