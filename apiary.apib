@@ -265,7 +265,44 @@ _eventId: activateUser
 
         {
             "alerts": null, 
-            "pageContent": null,
+            "pageContent": [
+                {
+                    "accountSubType": "ATM",
+                    "label": "ATM/Check Card",
+                    "minLength": "16",
+                    "maxLength": "16"
+                }, {
+                    "accountSubType": "CHK",
+                    "label": "Checkings, Savings or Money Market",
+                    "minLength": "8",
+                    "maxLength": "10"
+                }, {
+                    "accountSubType": "CRC",
+                    "label": "Credit Card or Line of Credit (with card)",
+                    "minLength": "15",
+                    "maxLength": "16"
+                }, {
+                    "accountSubType": "CRCWC",
+                    "label": "Line of Credit (without card)",
+                    "minLength": "15",
+                    "maxLength": "16"
+                }, {
+                    "accountSubType": "LOA",
+                    "label": "Loan or Mortgage",
+                    "minLength": "7",
+                    "maxLength": "10"
+                }, {
+                    "accountSubType": "CDA",
+                    "label": "CD",
+                    "minLength": "5",
+                    "maxLength": "10"
+                }, {
+                    "accountSubType": "IRB",
+                    "label": "IRA",
+                    "minLength": "5",
+                    "maxLength": "10"
+                }    
+            ],
             "flowExecutionUrl": "/api/login/activateUser.json?mockId=2&_eventId=activateUser"
         }
 
