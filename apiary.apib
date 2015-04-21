@@ -303,7 +303,34 @@ _eventId: activateUser
                     "maxLength": "10"
                 }    
             ],
-            "flowExecutionUrl": "/api/login/activateUser.json?mockId=2&_eventId=activateUser"
+            "flowExecutionUrl": "/api/login/validateAccount.json?eventId=validateAccount"
+        }
+
+# Group validateAccount
+
+Validate Account for enrollment
+
+Form parameters:
+<ul>
+   <li>accountNumber</li>
+   <li>pin</li>
+   <li>cvv</li>
+   <li>ssnumber</li>
+   <li>dateBirth</li>
+   <li>zipCode</li>
+</ul>
+    
+_eventId: activateUser
+
+## Correct answer [/api/login/validateAccount.json]
+### Activate [GET]
++ Response 200 (application/json)
+
+        {
+            "alerts": null,
+            "status": "OK",
+            "flowExecutionUrl": "/api/login/activateUser.json?eventId=activateUser",
+            "pageContent": null
         }
 
 # Group User activation
@@ -312,8 +339,6 @@ Activate the user for enrollment
 
 Form parameters:
 <ul>
-   <li>accountNumber</li>
-   <li>pin</li>
    <li>username</li>
    <li>password</li>
    <li>passwordConfirm</li>
