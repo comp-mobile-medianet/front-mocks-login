@@ -615,10 +615,10 @@ _eventId: validateUsername
 + Response 200 (application/json)
 
         {
-            "status": "OK",
+            "status": "FATAL",
             "pageContent": {
             },
-            "flowExecutionUrl": "/api/login/validateQuestion.json?mockId=2"
+            "flowExecutionUrl": "/api/login/recoveryPasswordUsername.json?mockId=2"
         }
 
 ## Third access [/api/login/validateQuestion.json]
@@ -626,7 +626,7 @@ _eventId: validateUsername
 + Response 200 (application/json)
 
         {
-            "status": "FATAL",
+            "status": "OK",
             "pageContent": {
                 "securityQuestion": "What was the name of your first pet?"
             },
