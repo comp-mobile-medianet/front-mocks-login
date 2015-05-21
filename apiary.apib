@@ -126,6 +126,27 @@ _eventId: validateTerms
             "pageContent" : "http://www.bbvacompass.com/mobile-banking/v4/terms?requestAcceptance=1&platform=web"
         }
 
+# Group LoginECATerms
+
+Login last step (optional, if user didn't accept the lastest T&C) with Terms and Conditions acceptance.
+
+Form parameters:
+<ul>
+    <li>validateTerms</li>
+    <li>declineTerms</li>
+</ul>
+    
+_eventId: validateTerms
+
+## Access [/pages/login/ECATerms.json]
+### Terms and conditions [GET]
++ Response 200 (application/json)
+
+        {
+            "alerts": null,
+            "pageContent" : "http://www.bbvacompass.com/mobile-banking/v4/ECATerms?requestAcceptance=1&platform=web"
+        }
+
 
 # Group Nickname Account
 
