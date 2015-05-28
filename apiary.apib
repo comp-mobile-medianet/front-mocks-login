@@ -621,3 +621,124 @@ _eventId: validateUsername
             },
             "flowExecutionUrl": "/api/login/recoveryChallenge.json?mockId=2"
         }
+
+# Group Validate Password
+
+Validate Password for reenrollment
+
+Form parameters:
+<ul>
+   <li>password</li>
+</ul>
+    
+_eventId: requestReset
+
+## Correct answer [/api/login/requestReset.json]
+### Activate [GET]
++ Response 200 (application/json)
+
+        {} && {
+            "alerts": null,
+            "status": "OK",
+            "flowExecutionUrl": "/api/login/securityCode.json?eventId=securityCode",
+            "pageContent": null
+        }
+
+# Group Security Code
+        
+Validate Security Code for reenrollment
+
+Form parameters:
+<ul>
+   <li>otp</li>
+</ul>
+    
+_eventId: verifySecurityCode
+
+## Correct answer [/api/login/securityCode.json]
+### Activate [GET]
++ Response 200 (application/json)
+
+        {} && {
+            "alerts": null,
+            "status": "OK",
+            "flowExecutionUrl": "/api/login/reenroll.json?eventId=reenroll",
+            "pageContent": {
+                "challengeQuestions":[
+                   {
+                      "questionId":"Q1.14",
+                      "questionText":"What was the name of your junior high school?"
+                   },
+                   {
+                      "questionId":"Q1.17",
+                      "questionText":"What was your first car?"
+                   },
+                   {
+                      "questionId":"Q1.24",
+                      "questionText":"What town did you meet your spouse in for the first time?"
+                   },
+                   {
+                      "questionId":"Q1.21",
+                      "questionText":"What town did your maternal grandmother live in?"
+                   },
+                   {
+                      "questionId":"Q1.22",
+                      "questionText":"What is the middle name of your best friend?"
+                   },
+                   {
+                      "questionId":"Q1.19",
+                      "questionText":"What was the name of your elementary school?"
+                   },
+                   {
+                      "questionId":"Q1.16",
+                      "questionText":"What was the first name of your first manager?"
+                   },
+                   {
+                      "questionId":"Q1.15",
+                      "questionText":"What was the name of the first company you worked for?"
+                   },
+                   {
+                      "questionId":"Q1.20",
+                      "questionText":"What was your childhood nickname?"
+                   },
+                   {
+                      "questionId":"Q1.18",
+                      "questionText":"What was the year and make of your first car?"
+                   },
+                   {
+                      "questionId":"Q1.13",
+                      "questionText":"What was the name of your first pet?"
+                   },
+                   {
+                      "questionId":"Q1.23",
+                      "questionText":"What is the first name of your first college roommate?"
+                   }
+                ]
+            }
+        }
+    
+# Group Reenroll user
+
+Reenrolls the user in online banking
+
+Form parameters:
+<ul>
+   <li>password</li>
+   <li>otp</li>
+   <li>questionId (list)</li>
+   <li>answerText (list)</li>
+
+</ul>
+
+_eventId: signIn
+
+## Correct answer [/api/login/reenroll.json]
+### Enroll [GET]
++ Response 200 (application/json)
+
+        {} && {
+            "alerts": null,
+            "status": "OK",
+            "flowExecutionUrl": "/accounts.html?execution=1",
+            "pageContent": null
+        }
