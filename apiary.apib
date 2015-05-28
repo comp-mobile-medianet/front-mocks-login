@@ -437,7 +437,7 @@ _eventId: enroll
         {} && {
             "alerts": [
                 {
-                    "type": "INFO",
+                    "type": "OK",
                     "alert": [
                         {
                             "text": "Enroll Ok"
@@ -760,7 +760,16 @@ _eventId: signIn
 + Response 200 (application/json)
 
         {} && {
-            "alerts": null,
+            "alerts": [
+                {
+                    "type": "OK",
+                    "alert": [
+                        {
+                            "text": "Your access to Mobile Banking has been successfully unlocked."
+                        }
+                    ]
+                }
+            ],
             "status": "OK",
             "flowExecutionUrl": "/accounts.html?execution=1",
             "pageContent": null
