@@ -633,14 +633,32 @@ Form parameters:
     
 _eventId: requestReset
 
-## Correct answer [/pages/login/passmarkReset.json]
+## Forgot answer [/pages/login/passmarkReset.json]
 ### Activate [GET]
 + Response 200 (application/json)
 
         {
-            "alerts": null, 
+            "alerts": null,
+            "header": {
+                "title": "Forgot Answer"
+            },
             "pageContent": {
                 "unlock": false
+            },
+            "flowExecutionUrl": "/api/login/requestReset.json?eventId=requestReset"
+        }
+        
+## Unlock user [/pages/login/passmarkReset.json?mockId=unlock]
+### Activate [GET]
++ Response 200 (application/json)
+
+        {
+            "alerts": null,
+            "header": {
+                "title": "Unlock"
+            },
+            "pageContent": {
+                "unlock": true
             },
             "flowExecutionUrl": "/api/login/requestReset.json?eventId=requestReset"
         }
