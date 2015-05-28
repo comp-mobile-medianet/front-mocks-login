@@ -622,6 +622,29 @@ _eventId: validateUsername
             "flowExecutionUrl": "/api/login/recoveryChallenge.json?mockId=2"
         }
 
+# Group Reenrollment
+
+Shows the reenrollment form
+
+Form parameters:
+<ul>
+   <li>password</li>
+</ul>
+    
+_eventId: requestReset
+
+## Correct answer [/pages/login/passmarkReset.json]
+### Activate [GET]
++ Response 200 (application/json)
+
+        {
+            "alerts": null, 
+            "pageContent": {
+                "flag": true
+            },
+            "flowExecutionUrl": "/api/login/requestReset.json?eventId=requestReset"
+        }
+
 # Group Validate Password
 
 Validate Password for reenrollment
@@ -650,7 +673,7 @@ Validate Security Code for reenrollment
 
 Form parameters:
 <ul>
-   <li>otp</li>
+   <li>securityCode</li>
 </ul>
     
 _eventId: verifySecurityCode
@@ -724,7 +747,7 @@ Reenrolls the user in online banking
 Form parameters:
 <ul>
    <li>password</li>
-   <li>otp</li>
+   <li>securityCode</li>
    <li>questionId (list)</li>
    <li>answerText (list)</li>
 
