@@ -124,7 +124,42 @@ _eventId: validateTerms
 
         {
             "alerts": null,
-            "pageContent" : "http://www.bbvacompass.com/mobile-banking/v4/terms?requestAcceptance=1&platform=web"
+            "pageContent" : {
+                "iframeUrl": "http://www.bbvacompass.com/mobile-banking/v4/terms?requestAcceptance=0&platform=web",
+                "mail": {
+                    "body": "The most recent version of the BBVA Compass Mobile Banking Terms of Use is available at the web address below. To keep a record of the current version, please print or save a copy when you receive this email.",
+                    "subject": "BBVA Compass Mobile Banking Terms of Use",
+                    "urlTermsMail": "http://www.bbvacompass.com/mobile-banking/v4/terms"
+                }
+            }
+        }
+
+# Group LoginECATerms
+
+Login last step (optional, if user didn't accept the lastest T&C) with ECA Terms acceptance.
+
+Form parameters:
+<ul>
+    <li>validateTerms</li>
+    <li>declineTerms</li>
+</ul>
+    
+_eventId: validateTerms
+
+## Access [/pages/login/ECATerms.json]
+### Terms and conditions [GET]
++ Response 200 (application/json)
+
+        {
+            "alerts": null,
+            "pageContent" : {
+                "iframeUrl": "http://www.bbvacompass.com/mobile-banking/v4/terms?requestAcceptance=0&platform=web",
+                "ecaTerms": true,
+                "mail": {
+                    "body": "The most recent version of the Electronic Communications Agreement is available at the web address below. To keep a record of the current version, please print or save a copy when you receive this email.",
+                    "urlTermsMail": "http://www.bbvacompass.com/mobile-banking/v4/terms"
+                }
+            }
         }
 
 # Group Nickname Account
