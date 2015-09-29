@@ -61,7 +61,50 @@ _eventId:
             }
         }
 
+## Remembered user systemOutage [/pages/login/validate.json?mockId=rememberSystemOutage]
+### Password [GET]
++ Response 200 (application/json)
 
+        {
+            "alerts": [
+                {
+                    "type": "WARNING",
+                    "alert": [
+                        {
+                            "text": "System unavailable. Please try again later."
+                        }
+                    ]
+                }
+            ],
+            "pageContent": {
+                "remembered": true,
+                "nickname": "Marcos Manuel",
+                "username": "marcosmon",
+                "lastSignonDate": "Wednesday 03/12/2014",
+                "systemOutage": true
+            }
+        }
+        
+## SystemOutage [/pages/login/validate.json?mockId=systemOutage]
+### Password [GET]
++ Response 200 (application/json)
+
+        {
+           "alerts": [
+                {
+                    "type": "WARNING",
+                    "alert": [
+                        {
+                            "text": "System unavailable. Please try again later."
+                        }
+                    ]
+                }
+            ],
+            "pageContent": {
+                "systemOutage": true
+            }
+        }
+        
 # Group LoginChallenge
 
 Login second step (optional, just if device is not recognized) with security answer input
