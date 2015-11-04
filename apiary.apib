@@ -632,7 +632,44 @@ _eventId: signIn
             "flowExecutionUrl": "/login/termsAndConditions.html?execution=1",
             "pageContent": null
         }
+        
+# Group Activate credit card
 
+Activate credit card
+
+Form parameters:
+<ul>
+   <li>accountNumber</li>
+   <li>cvv</li>
+   <li>ssnumber</li>
+</ul>
+
+_eventId: signIn
+
+## Activate credit card [/pages/login/activeCreditCard.json]
+
+### List All Questions [GET]
+
++ Response 200 (application/json)
+
+        {} && {
+            "alerts": [
+                {
+                    "type": "ERROR",
+                    "alert": [
+                        {
+                            "text": "Error pdf",
+                            "field": ""
+                        }
+                    ]
+                }
+            ],
+            "status": "OK",
+            "pageContent": {
+                "hasErrorPDF": true
+            },
+            "flowExecutionUrl": "/api/accounts/checkPDF.json?execution=e1s1"
+        }
 # Group Recovery Nickname
 
 User's nickname recovery first step
