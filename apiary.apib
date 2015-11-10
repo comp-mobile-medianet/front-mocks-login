@@ -644,11 +644,11 @@ Form parameters:
    <li>ssnumber</li>
 </ul>
 
-_eventId: signIn
+_eventId: activateCreditCard
 
 ## Activate credit card [/pages/login/activateCreditCard.json]
 
-### List All Questions [GET]
+### List [GET]
 
 + Response 200 (application/json)
 
@@ -657,9 +657,24 @@ _eventId: signIn
             "status": "OK",
             "pageContent": {
                 "hasErrorPDF": true
-            },
-            "flowExecutionUrl": "/api/accounts/checkPDF.json?execution=e1s1"
+            }
         }
+        
+        
+## Activate credit card success [/pages/login/activateCreditCardSuccess.json]
+
+### List [GET]
+
++ Response 200 (application/json)
+
+        {
+            "alerts": "",
+            "status": "OK",
+            "pageContent": {
+                "hasErrorPDF": true
+            }
+        }
+        
         
 # Group Recovery Nickname
 
