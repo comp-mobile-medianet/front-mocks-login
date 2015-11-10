@@ -671,9 +671,27 @@ _eventId: activateCreditCard
             "alerts": "",
             "status": "OK",
             "pageContent": {
-                "hasErrorPDF": true
+                "hasErrorPDF": true,
+                activateEnrollment: false
             }
         }
+        
+## Activate credit card success with activeEnrollment [/pages/login/activateCreditCardSuccess.json?mockId=activeEnrollment]
+
+### List [GET]
+
++ Response 200 (application/json)
+
+        {
+            "alerts": "",
+            "status": "OK",
+            "pageContent": {
+                "hasErrorPDF": true,
+                activateEnrollment: true
+            }
+        }
+        
+      
         
         
 # Group Recovery Nickname
